@@ -22,6 +22,13 @@ export default createGlobalStyle`
       scroll-behavior: smooth;
     }
     
+    body {
+      background: ${({theme}) => theme.COLORS.BACKGROUND};
+
+      color: ${({theme}) => theme.COLORS.FONT_COLOR};
+      font-family: ${({theme}) => theme.FONTS.FONT_MAIN};
+    }
+
     img {
         max-width: 100%;
         height: auto;
@@ -44,9 +51,5 @@ export default createGlobalStyle`
 
     ul {
       list-style: none;
-    }
-
-    a:hover {
-        filter: brightness(0.6);
     }
 `
