@@ -14,6 +14,7 @@ export default createGlobalStyle`
       -moz-osx-font-smoothing: grayscale;
 
       font: inherit;
+      font-size: 1.4rem;
     }
 
     :root {
@@ -31,15 +32,17 @@ export default createGlobalStyle`
         shape-margin: 0.75rem;
     }
 
-    a, button, ul {
+    a, button {
       text-decoration: none;
       color: inherit;
       cursor: pointer;
-      transition: filter 0.2s;
 
       border: none;
       background: transparent;
 
+    }
+
+    ul {
       list-style: none;
     }
 

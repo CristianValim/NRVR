@@ -1,9 +1,15 @@
 import { Container } from "./styles";
+import background from '../../assets/background.png'
+import { Header } from "../../components/header";
 
 export function Home() {
     return (
         <Container>
-            <h1>Background</h1>
+            <Header />
+
+            <div className="background">
+                <img src={background} alt="Imagem de um edificio" />
+            </div>
         </Container>
     )
 }
