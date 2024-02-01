@@ -21,7 +21,7 @@ export function Categories() {
   // Redirect to the project page if there is only one project
   if (projects.length === 1) {
     const projectSlug = projects[0].slug;
-    return <Navigate to={`/projetos/${category}/${projectSlug}`} replace />;
+    return <Navigate to={`/${category}/${projectSlug}`} replace />;
   }
 
 
@@ -29,7 +29,7 @@ export function Categories() {
     <Container>
       {projects.map((project) => (
         <div key={project.slug}>
-          <Link to={`/projetos/${category}/${project.slug}`}>
+          <Link to={`/${category}/${project.slug}`}>
           <img src={project.cover} alt={project.title} />
           </Link>
         </div>

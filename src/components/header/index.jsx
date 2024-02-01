@@ -12,10 +12,10 @@ export function Header() {
                 </Link>
 
                 <ul>
-                    <li><Link className="underline" to="/projetos/casas" >casas</Link></li>
-                    <li><Link className="underline" to="/projetos/interiores">interiores</Link></li>
-                    <li><Link className="underline" to="/projetos/edificios">edificios</Link></li>
-                    <li><Link className="underline" to="/projetos/objetos">objetos</Link></li>
+                    <li><Link className="underline" to="/casas" >casas</Link></li>
+                    <li><Link className="underline" to="/interiores">interiores</Link></li>
+                    <li><Link className="underline" to="/edificios">edificios</Link></li>
+                    <li><Link className="underline" to="/objetos">objetos</Link></li>
                 </ul>
 
                 <Link className="underline" to="/sobre" >sobre</Link>

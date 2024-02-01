@@ -4,10 +4,11 @@ import { useParams } from "react-router-dom";
 
 export function Project () {
     const { slug } = useParams();
-    // PROBLEMA TA AQUI NOS PROJETO 
+
     const projectsBySlug = Object.fromEntries(
       Object.values(pages).flatMap(Object.values).map((project) => [project.slug, project])
     );
+    
   
     const findProjectBySlug = (slug) => projectsBySlug[slug] || null;
   

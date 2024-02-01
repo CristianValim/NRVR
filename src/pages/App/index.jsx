@@ -13,8 +13,8 @@ export function App() {
       <Header />
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/projetos/:category" element={<Categories />} />
-        <Route path="/projetos/:category/:slug" element={<Project />} />
+        <Route path="/:category" element={<Categories />} />
+        <Route path="/:category/:slug" element={<Project />} />
         <Route path="/sobre" element={<Sobre />} />
       </Routes>
     </>
