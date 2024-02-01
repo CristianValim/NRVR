@@ -9,17 +9,17 @@ export const pages = {
       team       : "nrvr arquitetos + amanda fahur",
       adtext     : "casa ateliê, casa e ateliê.",
       description: `o desejo pela casa evoca o mais elementar, o primeiro universo da habitação, a essência da noção mais modesta e substancial de morar, de pureza formal, dividindo e compartilhando entre a intimidade e a imaginação.`,
-      cover      : "./projects/casas/casaAtelie/images/cover.png",
+      cover      : "/projects/casas/casaAtelie/images/cover.png",
       images     : [
-      "./projects/casas/casaAtelie/images/casa.jpg",
-      "./projects/casas/casaAtelie/images/casa2.png"
+      "/projects/casas/casaAtelie/images/casa.jpg",
+      "/projects/casas/casaAtelie/images/casa2.png"
       ],
       figures: [
-        "./projects/casas/casaAtelie/figures/figure1.png",
-        "./projects/casas/casaAtelie/figures/figure2.png",
-        "./projects/casas/casaAtelie/figures/figure3.png",
-        "./projects/casas/casaAtelie/figures/figure4.png",
-        "./projects/casas/casaAtelie/figures/figure5.png",
+        "/projects/casas/casaAtelie/figures/figure1.png",
+        "/projects/casas/casaAtelie/figures/figure2.png",
+        "/projects/casas/casaAtelie/figures/figure3.png",
+        "/projects/casas/casaAtelie/figures/figure4.png",
+        "/projects/casas/casaAtelie/figures/figure5.png",
       ],},
   },
   edificios : {
@@ -32,17 +32,17 @@ export const pages = {
       team       : "nrvr arquitetos + ruan diego",
       adtext     : "international competition",
       description: "the project answers the following question: what is the best way to teach a child? the explored alternative is to introduce playful elements into enko’s functional programmatic, subverting the rigidity of an ordinary urban school that stacks endless rows of rooms. the building shows a configuration involving spontaneity, incorporates unpredictability and assigns fun as the engine of all teaching dynamics.",
-      cover      : "./projects/edificios/enkoSchool/images/cover.png",
+      cover      : "/projects/edificios/enkoSchool/images/cover.png",
       images     : [
-      "./projects/edificios/enkoSchool/images/school1.png",
-      "./projects/edificios/enkoSchool/images/school2.png",
-      "./projects/edificios/enkoSchool/images/school3.png",
-      "./projects/edificios/enkoSchool/images/school4.png",
-      "./projects/edificios/enkoSchool/images/school5.png",
-      "./projects/edificios/enkoSchool/images/school6.png"
+      "/projects/edificios/enkoSchool/images/school1.png",
+      "/projects/edificios/enkoSchool/images/school2.png",
+      "/projects/edificios/enkoSchool/images/school3.png",
+      "/projects/edificios/enkoSchool/images/school4.png",
+      "/projects/edificios/enkoSchool/images/school5.png",
+      "/projects/edificios/enkoSchool/images/school6.png"
       ],
       figures: [
-        "./projects/edificios/enkoSchool/figures/figure.png"
+        "/projects/edificios/enkoSchool/figures/figure.png"
       ],}
 },
   interiores: {
@@ -53,13 +53,13 @@ export const pages = {
       builtArea  : "25 m²",
       year       : "2022",
       description: "os interiores do apartamento clappiér urbinatti trazem como estratégia de projeto a utilização de planos de fundos coloridos para destacar as compactas áreas molhadas - do branco ao azul, e do branco ao verde, com elementos de madeira, são caracterizados e delimitados os espaços.",
-      cover      : "./projects/interiores/aptoClappier/images/cover.png",
+      cover      : "/projects/interiores/aptoClappier/images/cover.png",
       images     : [
-      "./projects/interiores/aptoClappier/images/apto1.png",
-      "./projects/interiores/aptoClappier/images/apto2.png"
+      "/projects/interiores/aptoClappier/images/apto1.png",
+      "/projects/interiores/aptoClappier/images/apto2.png"
       ],
       figures: [
-        "./projects/interiores/aptoClappier/images/apto3.png"
+        "/projects/interiores/aptoClappier/images/apto3.png"
       ],},
 },
 objetos: {
@@ -71,17 +71,17 @@ objetos: {
       execution  : "amanda fahur + nrvr arquitetos",
       adtext     : "'o corpo coletivo age em vinte e quatro galhos'",
       description: "alguns convites nos chegam como oportunidade de olhar para tudo o que já foi feito como pela primeira vez. uma nova materialidade chega com tal força, capaz de estremecer os caminhos percorridos, tornando visíveis à palma da mão novas interpretações possíveis de um universo em formação. aceitá-los ou não. aqui, dizer sim implicou em uma presença física do excesso, seis mãos para dobrar, duas mãos para soldar, tornear, mais duas para pintar, mais de seis cabeças, três atuando sem parar, idas e vindas numa corrida contra o tempo. um corpo para o giro da mão, um corpo girando sob a solidez de mais de cem linhas douradas, um corpo que corta. neste projeto troféu-obra, em uma soma de tantos testes, dúvidas e noites, o resultado aponta o indicador para o processo, de novo, para uma construção entre imprevisibilidades.",
-      cover      : "./projects/objetos/trophy/images/cover.png",
+      cover      : "/projects/objetos/trophy/images/cover.png",
       images     : [
-        "./projects/objetos/trophy/images/trophy5.png",
-        "./projects/objetos/trophy/images/trophy6.png",
-        "./projects/objetos/trophy/images/trophy7.png",
-        "./projects/objetos/trophy/images/trophy3.png",
-        "./projects/objetos/trophy/images/trophy4.png",
+        "/projects/objetos/trophy/images/trophy5.png",
+        "/projects/objetos/trophy/images/trophy6.png",
+        "/projects/objetos/trophy/images/trophy7.png",
+        "/projects/objetos/trophy/images/trophy3.png",
+        "/projects/objetos/trophy/images/trophy4.png",
       ],
       figures: [
-        "./projects/objetos/trophy/images/trophy1.png",
-        "./projects/objetos/trophy/images/trophy2.png"
+        "/projects/objetos/trophy/images/trophy1.png",
+        "/projects/objetos/trophy/images/trophy2.png"
       ],
   }
 }
