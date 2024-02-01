@@ -1,21 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
+    height: 7svh;
     position: sticky;
     top: 0;
+    z-index: 1;
     background: ${({theme}) => theme.COLORS.BACKGROUND};
-    
+    padding: .9rem 0;
+
+    margin-inline: 5%;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+
     .logo {
-        padding: .9rem 0;
+        max-width: 8.5rem;
     }
 
     ul {
-       display: flex;
-       gap: 9.4rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
     }
     
     .underline {
@@ -37,7 +42,6 @@ export const Container = styled.header`
         transform-origin: left center;
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
-        -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease;
     }
  
@@ -48,4 +52,4 @@ export const Container = styled.header`
         -webkit-transform: scaleX(1);
         transform: scaleX(1);       
     }
-`
+`;

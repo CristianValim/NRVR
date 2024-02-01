@@ -1,5 +1,4 @@
 import { Container } from "./styles";
-import { Header } from "../../components/header";
 
 import sobre from '../../assets/sobre.png'
 import instagram from '../../assets/instagram.svg'
@@ -8,7 +7,6 @@ import { Link } from "react-router-dom";
 export function Sobre() {
     return (
         <Container>
-            <Header />
             <div className="sobre">
                 <h1>o escritório</h1>
                     <p>Lorem ipsum dolor sit amet consectetur. Nisi risus amet lacus sed. Vitae ultricies augue magna habitasse facilisi imperdiet scelerisque. Nibh eros nisl est fringilla consectetur massa gravida vitae. Mi tristique fames orci id orci porttitor. Lorem ipsum dolor sit amet consectetur. Nisi risus amet lacus sed. Vitae ultricies augue magna habitasse facilis imperdiet scelerisque.
