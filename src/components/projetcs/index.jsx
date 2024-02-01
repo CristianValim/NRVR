@@ -27,6 +27,10 @@ export function Project () {
       location,
       builtArea,
       year,
+      team,
+      concept,
+      modelage,
+      execution,
       adtext,
       description,
       cover,
@@ -42,10 +46,10 @@ export function Project () {
   
         <div className="flex-wrap">
             <div className="description"><h1>{title}</h1>
-              <h2><span>{location ? "localização" : "conceito"}</span></h2>
-              <h2><span>{builtArea ? "área construída" : "projeto e modelagem tridimensional"}</span></h2>
-              <h2><span>{year ? "ano" : "execução"}</span></h2>
-              <h2><span></span></h2>
+              <h2><span>{location ? "localização" : "conceito"}</span> {location ? location : concept}</h2>
+              <h2><span>{builtArea ? "área construída" : "projeto e modelagem tridimensional"}</span> {builtArea ? builtArea : modelage}</h2>
+              <h2><span>{year ? "ano" : "execução"}</span> {year ? year : execution}</h2>
+              <h2><span>{team ? "equipe" : ""}</span> {team}</h2>
         </div>  
   
             <div className="info">
