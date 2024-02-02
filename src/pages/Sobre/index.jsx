@@ -9,7 +9,8 @@ export function Sobre() {
         <Container>
             <div className="sobre">
                 <h1>o escritório</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur. Nisi risus amet lacus sed. Vitae ultricies augue magna habitasse facilisi imperdiet scelerisque. Nibh eros nisl est fringilla consectetur massa gravida vitae. Mi tristique fames orci id orci porttitor. Lorem ipsum dolor sit amet consectetur. Nisi risus amet lacus sed. Vitae ultricies augue magna habitasse facilis imperdiet scelerisque.
+                    <p>nrvr arquitetos, prática de arquitetura e urbanismo, do objeto ao lugar.
+por nilton ribeiro e vitor reisdörfer.
                     <br/>
                     <br/>
                     O lugar é um fundamento cíclico, um encontro de fluxos e de acontecimentos, um local de transformação das possibilidades humanas. É onde produzimos coletivamente as nossas ideias, onde produzimos coletivamente a nós mesmos.</p>

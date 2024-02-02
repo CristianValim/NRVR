@@ -61,6 +61,30 @@ export const pages = {
       figures: [
         "/NRVR/images/projects/interiores/aptoClappier/images/apto3.png"
       ],},
+    resStegmuller: {
+      slug       : "res-stegmuller",
+      title      : "residência stegmüller",
+      location   : "caliços, faro, portugal",
+      builtArea  : "414,28 m²",
+      year       : "3034",
+      description: "um dos desafios de um projeto internacional é entender e fazer referência ao local em que se está projetando. nesse caso, os materiais naturais, de tonalidades predominantemente claras, conectam os ambientes internos que se abrem em grandes planos para as oliveiras e laranjeiras da paisagem, aproximando a atmosfera de algarves para os interiores.",
+      cover      : "/NRVR/images/projects/interiores/resStegmuller/images/cover.jpg",
+      images     : [
+        "/NRVR/images/projects/interiores/resStegmuller/images/res1.png",
+        "/NRVR/images/projects/interiores/resStegmuller/images/res2.png",
+        "/NRVR/images/projects/interiores/resStegmuller/images/res3.png",
+        "/NRVR/images/projects/interiores/resStegmuller/images/res4.png",
+        "/NRVR/images/projects/interiores/resStegmuller/images/res5.png",
+        "/NRVR/images/projects/interiores/resStegmuller/images/res6.png",
+        "/NRVR/images/projects/interiores/resStegmuller/images/res7.png",
+        "/NRVR/images/projects/interiores/resStegmuller/images/res8.png",
+        "/NRVR/images/projects/interiores/resStegmuller/images/res9.png",
+        "/NRVR/images/projects/interiores/resStegmuller/images/res10.png",
+        "/NRVR/images/projects/interiores/resStegmuller/images/res11.png",
+        "/NRVR/images/projects/interiores/resStegmuller/images/res12.png",
+      ],
+      figures    : [],
+    },
 },
 objetos: {
   trophy: {

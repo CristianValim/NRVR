@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    padding-inline: 3%;
-
+    margin-inline: 5%;
     h1 {
         font-size: 3.2rem;
         font-weight: 300;
@@ -16,8 +15,6 @@ export const Container = styled.div`
 
     .sobre {
         margin-top: 3.8rem;
-        padding: 0 6.6rem;
-
         display: grid;
         grid-template-columns: 1fr 2fr 3fr;
         column-gap: 5rem;

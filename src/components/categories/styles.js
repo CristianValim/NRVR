@@ -1,42 +1,43 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin-bottom: 5rem;
-  padding-inline: 3%;
+  margin: 0 5% 5rem;
 
-  .casas {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
-  }
-
-  .imagem-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5%;
+  
+  .overlay-container {
     position: relative;
+    width: 100%;
     overflow: hidden;
+    aspect-ratio: 16 / 9;
   }
 
-  img {
+  .images {
+    height: 100%;
     width: 100%;
-    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    object-fit: cover;
   }
 
   .overlay {
-    display: grid;
-    place-content: center;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #FFF;
     font-size: 2.6rem;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
     opacity: 0;
-    transition: opacity 1s ease;
-  }
+    transition: opacity 0.5s ease;
+}
 
-  .imagem-container:hover .overlay {
+.overlay-container:hover .overlay {
     opacity: 1;
-  }
+}
 `;

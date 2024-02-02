@@ -1,6 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
+    @font-face {
+      font-family: 'Hando';
+      src: url('../fonts/hando/Hando Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
     *, *::before, *::after {
       box-sizing: border-box;

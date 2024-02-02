@@ -28,9 +28,12 @@ export function Categories() {
   return (
     <Container>
       {projects.map((project) => (
-        <div key={project.slug}>
+        <div key={project.slug} className="image-container">
           <Link to={`/${category}/${project.slug}`}>
-          <img src={project.cover} alt={project.title} />
+            <div className="overlay-container">
+              <img src={project.cover} alt={project.title} className="images" />
+              <div className="overlay">{project.title}</div>
+            </div>
           </Link>
         </div>
       ))}

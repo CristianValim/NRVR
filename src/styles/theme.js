@@ -1,6 +1,7 @@
 export default {
     FONTS: {
-      FONT_MAIN: "Roboto"
+      FONT_MAIN: "Hando, sans-serif"
+
     },
     COLORS: {
       BACKGROUND: "#F8F1F1",
