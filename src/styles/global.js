@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import hando from '../modules/fonts/hando/Hando Regular.ttf'
+import hando from '/src/fonts/hando/Hando Regular.ttf';
 
 export default createGlobalStyle`
     @font-face {
