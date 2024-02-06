@@ -7,7 +7,7 @@ export function Header() {
 
     return (
         <Container>
-                <Link to="/">
+                <Link to="/NRVR">
                     <img className='logo' src={logo} alt="Logo NRVR" />
                 </Link>
 
