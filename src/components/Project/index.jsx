@@ -1,6 +1,6 @@
 import { Container } from "./styles";
 import { pages } from '../../modules/pagesPath';
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 
 export function Project () {
     const { slug } = useParams();
@@ -19,9 +19,10 @@ export function Project () {
 
     if (!project) {
       console.log(project, slug, projectsBySlug)
-      return <p>Projeto não encontrado</p>;
+      return <Navigate to='/404' />;
     }
 
+    
     const {
       title,
       location,

@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.header`
     height: 7svh;
+
     position: sticky;
     top: 0;
     z-index: 1;
     background: ${({theme}) => theme.COLORS.BACKGROUND};
-    padding: .9rem 0;
+    padding: .9rem 1rem;
 
-    margin-inline: 5%;
 
     display: flex;
     align-items: center;
@@ -20,9 +20,14 @@ export const Container = styled.header`
     ul {
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 10%;
     }
     
+    #about {
+        font-size: 1.6rem;
+    }
+
     .underline {
         position: relative;
         text-decoration: none;  
