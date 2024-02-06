@@ -5,7 +5,7 @@ import { pages } from '../../modules/pagesPath';
 import { Container } from './styles'
 
 export function Home() {
-  const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
+  const [currentCategoryIndex, setCurrentCategoryIndex] = useState(1);
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const categories = Object.keys(pages);
   const projects = Object.values(pages);

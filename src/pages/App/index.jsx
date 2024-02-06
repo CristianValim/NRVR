@@ -13,13 +13,11 @@ export function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" exact element={<Home />} />
+        <Route path="/NRVR" element={<Home />} />
+        <Route path="/sobre" element={<Sobre />} />
         <Route path="/:category" element={<Categories />} />
         <Route path="/:category/:slug" element={<Project />} />
-        <Route path="/sobre" element={<Sobre />} />
-
-        <Route path="/404" element={<NotFound />} />
-        
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
