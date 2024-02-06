@@ -19,7 +19,9 @@ export function Header() {
                     <li><Link className="underline" to="/objetos">objetos</Link></li>
                 </ul>
 
-                <Link id='about' className="underline" to="/sobre" >sobre</Link>
+                <button id='about'>
+                    <Link className="underline" to="/sobre">sobre</Link>
+                </button>
         </Container>
     )
 }

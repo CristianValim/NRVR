@@ -13,15 +13,8 @@ export function Categories() {
 
   const projects = Object.values(categoryProjects);
 
-  // Check if there are projects in the category
   if (projects.length === 0) {
-    return <p>No projects found for this category.</p>;
-  }
-
-  // Redirect to the project page if there is only one project
-  if (projects.length === 1) {
-    const projectSlug = projects[0].slug;
-    return <Navigate to={`/${category}/${projectSlug}`} replace />;
+    return <Navigate to="/404" replace />;
   }
 
 

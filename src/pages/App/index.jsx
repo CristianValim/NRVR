@@ -17,7 +17,7 @@ export function App() {
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/:category" element={<Categories />} />
         <Route path="/:category/:slug" element={<Project />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/404" element={<NotFound />} />
       </Routes>
     </>
   );

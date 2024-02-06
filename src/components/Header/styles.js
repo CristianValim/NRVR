@@ -24,8 +24,13 @@ export const Container = styled.header`
         gap: 10%;
     }
     
-    #about {
-        font-size: 1.6rem;
+    #about{
+        text-align: end;
+        min-width: 8.5rem;
+
+        a {
+            font-size: 1.6rem;
+        }
     }
 
     .underline {
