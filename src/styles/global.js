@@ -1,9 +1,10 @@
 import { createGlobalStyle } from "styled-components";
+import hando from '../modules/fonts/hando/Hando Regular.ttf'
 
 export default createGlobalStyle`
     @font-face {
       font-family: 'Hando';
-      src: url('../fonts/hando/Hando Regular.ttf') format('truetype');
+      src: url${hando} format('truetype');
       font-weight: normal;
       font-style: normal;
     }
