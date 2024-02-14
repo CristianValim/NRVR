@@ -9,12 +9,10 @@ export const pages = {
       team       : "nrvr arquitetos + amanda fahur",
       adtext     : "casa ateliê, casa e ateliê.",
       description: `o desejo pela casa evoca o mais elementar, o primeiro universo da habitação, a essência da noção mais modesta e substancial de morar, de pureza formal, dividindo e compartilhando entre a intimidade e a imaginação.`,
-      cover      : "/NRVR/images/projects/casas/casaAtelie/images/cover.png",
-      images     : [
-        "/NRVR/images/projects/casas/casaAtelie/images/casa.jpg",
-        "/NRVR/images/projects/casas/casaAtelie/images/casa2.png",
-      ],
+      cover      : "/NRVR/images/projects/casas/casaAtelie/images/casa2.png",
+      images     : [],
       figures: [
+        "/NRVR/images/projects/casas/casaAtelie/figures/casa.jpg",
         "/NRVR/images/projects/casas/casaAtelie/figures/figure1.png",
         "/NRVR/images/projects/casas/casaAtelie/figures/figure2.png",
         "/NRVR/images/projects/casas/casaAtelie/figures/figure3.png",
@@ -101,7 +99,6 @@ objetos: {
         "/NRVR/images/projects/objetos/trophy/images/trophy6.png",
         "/NRVR/images/projects/objetos/trophy/images/trophy7.png",
         "/NRVR/images/projects/objetos/trophy/images/trophy3.png",
-        "/NRVR/images/projects/objetos/trophy/images/trophy4.png",
       ],
       figures: [
         "/NRVR/images/projects/objetos/trophy/images/trophy1.png",

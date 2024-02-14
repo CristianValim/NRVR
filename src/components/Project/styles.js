@@ -5,7 +5,7 @@ export const Container = styled.div`
 
     .cover {
         width: 100%;
-        height: 93svh;
+        height: calc(93svh - 1.8rem);
         object-fit: cover;
     }
 
@@ -51,6 +51,10 @@ export const Container = styled.div`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.8rem;
+
+        img {
+            aspect-ratio: 9 / 16;
+        }
     }
 
     .gallery img, .figures img{
@@ -65,5 +69,16 @@ export const Container = styled.div`
         grid-template-columns: repeat(3, 1fr);
 
         gap: 1.8rem;
+
+        img {
+            aspect-ratio: 1/1;
+        }
+    }
+
+    .video iframe{
+        width: 100%;
+        max-height: 93vh;
+        aspect-ratio: 16/9;
+        margin-bottom: 5rem;
     }
 `

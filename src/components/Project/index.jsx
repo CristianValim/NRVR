@@ -1,6 +1,8 @@
+
 import { Container } from "./styles";
 import { pages } from '../../modules/pagesPath';
 import { useParams, Navigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export function Project () {
     const { slug } = useParams();
@@ -41,6 +43,20 @@ export function Project () {
 
     console.log("images: ", project.cover, project.images, project.figures);
 
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY === 0) {
+          window.history.back();
+        }
+      };
+
+      // Adiciona um event listener para o evento 'scroll'
+      window.addEventListener('scroll', handleScroll);
+
+      // Remove o event listener ao desmontar o componente
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
       <Container>
         <img className="cover" src={cover} alt="Capa do projeto" />
@@ -62,14 +78,18 @@ export function Project () {
   
         <div className="gallery">
           {images.map((image, index) => (
-            <img key={index} src={image} alt={`Foto ${index + 1}`} />
+            <img key={index} src={image} alt={project.title} />
           ))}
         </div>
   
         <div className="figures">
           {figures.map((figure, index) => (
-            <img key={index} src={figure} alt={`Figura ${index + 1}`} />
+            <img key={index} src={figure} alt={project.title} />
           ))}
+        </div>
+
+        <div className="video">
+        <iframe src="https://www.youtube-nocookie.com/embed/6stlCkUDG_s?si=bkYQlmuKmh2g55tA&amp;controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </Container>
     );

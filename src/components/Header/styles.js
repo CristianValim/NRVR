@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-    height: 7svh;
+    min-height: 7svh;
 
     position: sticky;
     top: 0;
     z-index: 1;
     background: ${({theme}) => theme.COLORS.BACKGROUND};
-    padding: .9rem 1rem;
+    padding: 1.3rem;
 
 
     display: flex;

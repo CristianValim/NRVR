@@ -6,17 +6,15 @@ export function Categories() {
   const { category } = useParams();
   const categoryProjects = pages[category];
 
-  // Check if the category exists
   if (!categoryProjects) {
     return <Navigate to="/404" replace />;
   }
-
+  
   const projects = Object.values(categoryProjects);
-
+  
   if (projects.length === 0) {
     return <Navigate to="/404" replace />;
   }
-
 
   return (
     <Container>

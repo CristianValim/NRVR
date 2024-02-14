@@ -9,6 +9,10 @@ export default createGlobalStyle`
       font-style: normal;
     }
 
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
     *, *::before, *::after {
       box-sizing: border-box;
     }

@@ -18,9 +18,14 @@ por nilton ribeiro e vitor reisdörfer.
             <img src={sobre} alt="Foto dos fundadores NRVR" />
 
                 <h1>contato</h1>
-                <p><span>nrvr@gmail.com</span></p>
-                <Link className="col2" to="https://wa.me/5544991030389" target="blank"><span>+5544 99103 0389</span></Link>
-                <Link className="col2" to="https://www.instagram.com/nrvrarquitetos/" target="blank"><img className="instagram" src={instagram} alt="Link para o nosso Instagram" /></Link>
+                <div className="contact col2">
+                    <p><span>contato@nrvrarquitetos.com</span></p>
+                    <h3><span>Vitor Reisdörfer</span></h3>
+                    <Link to="https://wa.me/5542998003356" target="blank"><span>42 9 9800 3356</span></Link>
+                    <h3><span>Nilton Ribeiro</span></h3>
+                    <Link to="https://wa.me/5544999189608" target="blank"><span>44 9 9918 9608</span></Link>
+                    <Link to="https://www.instagram.com/nrvrarquitetos/" target="blank"><img className="instagram" src={instagram} alt="Link para o nosso Instagram" /></Link>
+                </div>
             </div>
         </Container>
     )
