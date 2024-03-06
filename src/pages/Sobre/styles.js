@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
     margin-inline: 5%;
     font-weight: 300;
 
@@ -30,6 +31,8 @@ export const Container = styled.div`
     .instagram {
         max-width: 3rem;
         display: block;
+        color: #008CE2;
+;
     }
 
     .contact * {

@@ -7,7 +7,7 @@ export const Container = styled.header`
     top: 0;
     z-index: 1;
     background: ${({theme}) => theme.COLORS.BACKGROUND};
-    padding: 1.3rem;
+    padding: 1.3rem 0;
 
 
     display: flex;
