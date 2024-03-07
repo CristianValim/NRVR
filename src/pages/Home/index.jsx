@@ -33,7 +33,7 @@ export function Home() {
     return getCurrentCategory()[currentProjectIndex];
   };
 
-  function handleWheel() {
+  function handleScroll() {
     if (linkRef.current) {
       linkRef.current.click();
     }
@@ -43,13 +43,13 @@ export function Home() {
     <Container>
       <AnimatePresence>
         <motion.div
-          key={getCurrentProject().slug} // Adicione uma chave única para cada imagem
+          key={getCurrentProject().slug}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 3 }}
         >
           <Link to={`/${categories[currentCategoryIndex]}/${getCurrentProject().slug}`} ref={linkRef}>
-            <img src={getCurrentProject().cover} alt={getCurrentProject().title} onWheel={handleWheel} />
+            <img src={getCurrentProject().cover} alt={getCurrentProject().title} onWheel={handleScroll} />
           </Link>
         </motion.div>
       </AnimatePresence>

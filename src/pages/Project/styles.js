@@ -2,11 +2,8 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
-    margin-inline: 5%;
-
     .cover {
         width: 100%;
-        height: calc(93svh - 1.8rem);
         object-fit: cover;
     }
 
@@ -17,69 +14,88 @@ export const Container = styled(motion.div)`
     }
 
     .flex-wrap {
-        width: 80%;
-        margin: 10% auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        margin: 5% auto;
         
         h1 {
-            font-size: 6rem;
+            font-size: clamp( 4rem, calc(2rem + 2vw), 6rem);
             font-weight: 300; 
             line-height: 1;
 
             margin-bottom: 2rem;
         }
+        
+        .info {
+            font-size: clamp( 1.2rem, calc(1rem + 1vw), 1.6rem);
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
 
         h2 {
+            font-size: clamp( 1.2rem, calc(1rem + 1vw), 1.6rem);
             font-weight: 300;
             line-height: 2.5rem;
         }
 
         h2 span {
-            font-weight: 700;
+            font-size: clamp( 1.2rem, calc(1rem + 1vw), 1.6rem);
+            font-weight: 600;
+        }
+    }
+    
+    .gallery, .figures {
+        width: 90%;
+        display: grid;
+        gap: 1.8rem;
+        margin-bottom: 1.8rem;
+        margin-inline: auto;
+    }
+
+    .gallery img, .figures img{
+        max-height: 62.4rem;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    iframe{
+        width: 100%;
+        aspect-ratio: 9/16;
+    }
+
+    @media (min-width: 600px) {
+
+        .cover {
+            height: calc(93svh - 1.8rem);
         }
 
-        .info {
+        .flex-wrap {
+            display: grid;
+
+            .info {
             margin-left: 20%;
             max-width: 60%;
             line-height: 2;
         }
-    }
-
-    
-
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.8rem;
-
-        img {
-            aspect-ratio: 9 / 16;
         }
-    }
 
-    .gallery img, .figures img{
-        width: 100%;
-        max-height: 62.4rem;
-        object-fit: cover;
-    }
+        .gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-    .figures {
-        margin: 1.8rem 0 5rem;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        .figures {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
 
-        gap: 1.8rem;
+            gap: 1.8rem;
 
-        img {
+            img {
+                aspect-ratio: 1/1;
+            }
+        }
+
+        iframe{
+            width: 100%;
             aspect-ratio: 1/1;
         }
-    }
-
-    .video iframe{
-        width: 100%;
-        max-height: 93vh;
-        aspect-ratio: 16/9;
-        margin-bottom: 5rem;
     }
 `

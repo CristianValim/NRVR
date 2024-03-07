@@ -2,7 +2,6 @@ import { Container } from "./styles";
 import { motion } from 'framer-motion';
 import { pages } from '../../modules/pagesPath';
 import { useParams, Navigate } from "react-router-dom";
-import { useEffect } from "react";
 
 export function Project () {
     const { slug } = useParams();
@@ -11,16 +10,11 @@ export function Project () {
       Object.values(pages).flatMap(Object.values).map((project) => [project.slug, project])
     );
 
-    console.log("projectsBySlug: ", projectsBySlug);
-
     const findProjectBySlug = (slug) => projectsBySlug[slug] || null;
-
     const project = findProjectBySlug(slug);
 
-    console.log("project: ", project);
 
     if (!project) {
-      console.log(project, slug, projectsBySlug)
       return <Navigate to='/404' />;
     }
 
@@ -39,23 +33,10 @@ export function Project () {
       cover,
       images,
       figures,
+      video
     } = project;
 
     console.log("images: ", project.cover, project.images, project.figures);
-
-    useEffect(() => {
-      const handleScroll = () => {
-        if (window.scrollY === 0) {
-          window.history.back();
-        }
-      };
-
-      // Adiciona um event listener para o evento 'scroll'
-      window.addEventListener('scroll', handleScroll);
-
-      // Remove o event listener ao desmontar o componente
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     return (
       <Container
@@ -68,17 +49,18 @@ export function Project () {
     
           <div className="flex-wrap">
               <div className="description"><h1>{title}</h1>
+              <div className="info">
+                <p>{adtext}</p>
+                <br/>
+                {description}
+              </div>
+
                 <h2><span>{location ? "localização" : "conceito"}</span> {location ? location : concept}</h2>
                 <h2><span>{builtArea ? "área construída" : "projeto e modelagem tridimensional"}</span> {builtArea ? builtArea : modelage}</h2>
                 <h2><span>{year ? "ano" : "execução"}</span> {year ? year : execution}</h2>
                 <h2><span>{team ? "equipe" : ""}</span> {team}</h2>
           </div>  
     
-              <div className="info">
-                <p>{adtext}</p>
-                <br/>
-                <p>{description}</p>
-              </div>
           </div>
     
           <div className="gallery">
@@ -91,10 +73,13 @@ export function Project () {
             {figures.map((figure, index) => (
               <img key={index} src={figure} alt={project.title} />
             ))}
-          </div>
 
-          <div className="video">
-          <iframe src="https://www.youtube-nocookie.com/embed/6stlCkUDG_s?si=bkYQlmuKmh2g55tA&amp;controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe
+            src={video}
+            style={{ display: video ? "block" : "none"}}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
           </div>
       </Container>
     );

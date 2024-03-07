@@ -7,26 +7,42 @@ export const Container = styled.header`
     top: 0;
     z-index: 1;
     background: ${({theme}) => theme.COLORS.BACKGROUND};
-    padding: 1.3rem 0;
-
+    padding: 3rem;
 
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     .logo {
         max-width: 8.5rem;
+        margin-left: 1rem;
+    }
+
+    .modal {
+        position: absolute;
+        background: ${({theme}) => theme.COLORS.BACKGROUND};
+
+        width: 100%;
+        top: 12vh;
+        left: 0;
     }
 
     ul {
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 10%;
+
+        li {
+            margin-bottom: 2rem;
+            padding: 2.5rem;
+        }
     }
-    
+
     #about{
         text-align: end;
         min-width: 8.5rem;
+        margin-right: 1rem;
 
         a {
             font-size: 1.6rem;
@@ -61,5 +77,9 @@ export const Container = styled.header`
         visibility: visible;
         -webkit-transform: scaleX(1);
         transform: scaleX(1);       
+    }
+
+    @media (min-width: 600px) {
+        margin-inline: 0rem;
     }
 `;

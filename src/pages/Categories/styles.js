@@ -7,7 +7,6 @@ export const Container = styled(motion.div)`
   text-align: center;
     
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 1.8rem;
   
   .overlay-container {
@@ -42,5 +41,9 @@ export const Container = styled(motion.div)`
 
 .overlay-container:hover .overlay {
     opacity: 1;
+}
+
+@media (min-width: 600px) {
+  grid-template-columns: repeat(2, 1fr);
 }
 `;
