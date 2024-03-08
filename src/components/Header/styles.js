@@ -1,85 +1,93 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-    min-height: 7svh;
+  min-height: 7svh;
+  padding: 3rem;
 
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background: ${({theme}) => theme.COLORS.BACKGROUND};
-    padding: 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: ${({ theme }) => theme.COLORS.BACKGROUND};
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    .logo {
-        max-width: 8.5rem;
-        margin-left: 1rem;
-    }
+  .logo {
+    max-width: 8.5rem;
+  }
 
-    .modal {
-        position: absolute;
-        background: ${({theme}) => theme.COLORS.BACKGROUND};
+  .mobile {
+    position: absolute;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND};
 
-        width: 100%;
-        top: 12vh;
-        left: 0;
-    }
+    width: 100%;
+    top: 11vh;
+    left: 0;
 
     ul {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+      gap: 20%;
+      li {
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
 
-        li {
-            margin-bottom: 2rem;
-            padding: 2.5rem;
-        }
-    }
+  .desktop {
+    width: 100%;
+  }
 
-    #about{
-        text-align: end;
-        min-width: 8.5rem;
-        margin-right: 1rem;
+  ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10%;
+    margin: 3rem 0;
+  }
 
-        a {
-            font-size: 1.6rem;
-        }
-    }
+  #about {
+    text-align: end;
+    min-width: 8.5rem;
+    margin-right: 1rem;
 
-    .underline {
-        position: relative;
-        text-decoration: none;  
+    a {
+      font-size: 1.6rem;
     }
-  
-    .underline:before {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 1px;
-        bottom: 0;
-        left: 0;
-        background-color: ${({theme}) => theme.COLORS.FONT_COLOR};
-        
-        visibility: hidden;
-        opacity: 0;
-        transform-origin: left center;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        transition: all 0.5s ease;
-    }
- 
-    .underline:hover::before {
-        width: 100%;
-        opacity: 1;
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);       
-    }
+  }
 
-    @media (min-width: 600px) {
-        margin-inline: 0rem;
-    }
+  .underline {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .underline:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: ${({ theme }) => theme.COLORS.FONT_COLOR};
+
+    visibility: hidden;
+    opacity: 0;
+    transform-origin: left center;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transition: all 0.5s ease;
+  }
+
+  .underline:hover::before {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+  @media (min-width: 600px) {
+    margin-inline: 0rem;
+    padding: 0;
+  }
 `;

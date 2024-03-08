@@ -15,16 +15,16 @@ export function Sobre() {
             animate={{opacity: 1}}
             exit={{opacity: 0}}>
                 <div className="sobre">
+                <img className='col3' src={sobre} alt="Foto dos fundadores NRVR" />
                     <h1>o escritório</h1>
-                        <p>nrvr arquitetos, prática de arquitetura e urbanismo, do objeto ao lugar.
+                        <p className="row1">nrvr arquitetos, prática de arquitetura e urbanismo, do objeto ao lugar.
                         por nilton ribeiro e vitor reisdörfer.
                         <br/>
                         <br/>
                         O lugar é um fundamento cíclico, um encontro de fluxos e de acontecimentos, um local de transformação das possibilidades humanas. É onde produzimos coletivamente as nossas ideias, onde produzimos coletivamente a nós mesmos.</p>
 
-                <img src={sobre} alt="Foto dos fundadores NRVR" />
 
-                    <h1>contato</h1>
+                    <h1 className="col1 row1">contato</h1>
                     <div className="contact col2">
                         <p><span>contato@nrvrarquitetos.com</span></p>
                         <h3><span>Vitor Reisdörfer</span></h3>

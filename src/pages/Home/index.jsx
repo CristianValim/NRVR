@@ -51,6 +51,8 @@ export function Home() {
           <Link to={`/${categories[currentCategoryIndex]}/${getCurrentProject().slug}`} ref={linkRef}>
             <img src={getCurrentProject().cover} alt={getCurrentProject().title} onWheel={handleScroll} />
           </Link>
+
+          
         </motion.div>
       </AnimatePresence>
     </Container>

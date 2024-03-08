@@ -24,8 +24,16 @@ export const Container = styled(motion.div)`
         width: 100%;
     }
 
-    .col2 {
-        grid-column-start: 2;
+    .col1 {
+        grid-column-start: 1;
+    }
+
+    .row1 {
+        grid-row-start: 1;
+    }
+
+    .col3 {
+        grid-column-start: 3;
     }
 
     .instagram {
