@@ -16,6 +16,7 @@ export const Container = styled(motion.div)`
 
   h1 {
     font-size: 3.2rem;
+    display: inline-block;
   }
 
   p {
@@ -26,12 +27,16 @@ export const Container = styled(motion.div)`
     font-size: 2.1rem;
   }
 
+  .row1 {
+    grid-row-start: 1;
+  }
+
   .col1 {
     grid-column-start: 1;
   }
 
-  .row1 {
-    grid-row-start: 1;
+  .col2 {
+    grid-column-start: 2;
   }
 
   .col3 {
@@ -45,10 +50,11 @@ export const Container = styled(motion.div)`
   }
 
   .instagram-logo {
-    margin-top: 0.5rem;
     max-width: 3rem;
-    display: block;
-    color: #008ce2;
+    margin-top: .5rem;
+
+    position: absolute;
+    right: 5%;
   }
 
   .contact * {
@@ -56,11 +62,36 @@ export const Container = styled(motion.div)`
   }
 
   @media (min-width: 600px) {
+    margin-inline: 5%;
+
     .sobre {
       margin-top: 3.8rem;
       display: grid;
       grid-template-columns: 1fr 2fr 3fr;
       column-gap: 5rem;
+    }
+
+    h1,
+    h3,
+    .social {
+        margin-inline: 0%;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .instagram-logo {
+        grid-row-start: 3;
+        grid-column-start: 2;
+
+        position: relative;
+        left: 0;
     }
   }
 `;
