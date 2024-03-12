@@ -24,14 +24,17 @@ export function Sobre() {
                         O lugar é um fundamento cíclico, um encontro de fluxos e de acontecimentos, um local de transformação das possibilidades humanas. É onde produzimos coletivamente as nossas ideias, onde produzimos coletivamente a nós mesmos.</p>
 
 
-                    <h1 className="col1 row1">contato</h1>
+                    <div className="instagram-flex">
+                        <h1 className="col1 row1">contato</h1>
+                        <Link className="instagram-logo" to="https://www.instagram.com/nrvrarquitetos/" target="blank"><img src={instagram} alt="Link para o nosso Instagram" /></Link>
+                    </div>
+
                     <div className="contact col2">
                         <p><span>contato@nrvrarquitetos.com</span></p>
                         <h3><span>Vitor Reisdörfer</span></h3>
-                        <Link to="https://wa.me/5542998003356" target="blank"><span>42 9 9800 3356</span></Link>
+                        <Link to="https://wa.me/5542998003356" target="blank" className="social"><span>42 9 9800 3356</span></Link>
                         <h3><span>Nilton Ribeiro</span></h3>
-                        <Link to="https://wa.me/5544999189608" target="blank"><span>44 9 9918 9608</span></Link>
-                        <Link className="instagram" to="https://www.instagram.com/nrvrarquitetos/" target="blank"><img src={instagram} alt="Link para o nosso Instagram" /></Link>
+                        <Link to="https://wa.me/5544999189608" target="blank" className="social"><span>44 9 9918 9608</span></Link>
                     </div>
                 </div>
         </Container>
