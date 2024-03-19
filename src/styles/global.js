@@ -48,6 +48,9 @@ export default createGlobalStyle`
         background-repeat: no-repeat;
         background-size: cover;
         shape-margin: 0.75rem;
+
+        display: grid;
+        place-content: center;
     }
 
     a, button {

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
   min-height: 100vh;
+  text-align: center;
 
   .overlay-container {
     position: relative;

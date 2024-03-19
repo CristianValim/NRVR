@@ -22,7 +22,7 @@ export const Container = styled.header`
     background: ${({ theme }) => theme.COLORS.BACKGROUND};
 
     width: 100%;
-    top: 11vh;
+    top: 10vh;
     left: 0;
 
     ul {

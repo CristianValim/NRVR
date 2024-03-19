@@ -59,7 +59,7 @@ export function Header() {
             initial={{ opacity: 1, height: 0 }}
             animate={{
               opacity: showMenu ? 1 : 0,
-              height: showMenu ? 'auto' : 0,
+              height: showMenu ? '9vh' : 0,
             }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}>
             <li>

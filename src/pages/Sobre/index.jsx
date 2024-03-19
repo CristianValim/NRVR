@@ -58,7 +58,7 @@ export function Sobre() {
               <span>nilton ribeiro</span>
             </h3>
             <Link
-              to="https://wa.me/5544999189608"
+              to="https://wa.me/5544998663642"
               target="blank"
               className="social">
               <span>44 9 9866 3642</span>
