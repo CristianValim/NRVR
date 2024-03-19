@@ -1,14 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
-
 
 export const Container = styled(motion.div)`
   margin: 0 5% 5rem;
   text-align: center;
-    
+
   display: grid;
   gap: 1.8rem;
-  
+
   .overlay-container {
     position: relative;
     width: 100%;
@@ -31,19 +30,23 @@ export const Container = styled(motion.div)`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFF;
+    color: #fff;
     font-size: 2.6rem;
 
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.4)
+    );
     opacity: 0;
     transition: opacity 0.5s ease;
-}
+  }
 
-.overlay-container:hover .overlay {
+  .overlay-container:hover .overlay {
     opacity: 1;
-}
+  }
 
-@media (min-width: 600px) {
-  grid-template-columns: repeat(2, 1fr);
-}
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
   font-weight: 300;
@@ -51,7 +51,7 @@ export const Container = styled(motion.div)`
 
   .instagram-logo {
     max-width: 3rem;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 
     position: absolute;
     right: 5%;
@@ -68,30 +68,34 @@ export const Container = styled(motion.div)`
       margin-top: 3.8rem;
       display: grid;
       grid-template-columns: 1fr 2fr 3fr;
-      column-gap: 5rem;
+
+      p {
+        max-width: 45rem;
+        margin-right: 15%;
+      }
     }
 
     h1,
     h3,
     .social {
-        margin-inline: 0%;
+      margin-inline: 0%;
     }
 
     p {
-        margin: 0;
+      margin: 0;
     }
 
     img {
-        width: 100%;
-        margin: 0;
+      width: 100%;
+      margin: 0;
     }
 
     .instagram-logo {
-        grid-row-start: 3;
-        grid-column-start: 2;
+      grid-row-start: 3;
+      grid-column-start: 2;
 
-        position: relative;
-        left: 0;
+      position: relative;
+      left: 0;
     }
   }
 `;

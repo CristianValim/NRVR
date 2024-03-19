@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.header`
   min-height: 7svh;
@@ -62,7 +62,7 @@ export const Container = styled.header`
   }
 
   .underline:before {
-    content: "";
+    content: '';
     position: absolute;
     width: 0;
     height: 1px;

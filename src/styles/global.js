@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 import hando from '/src/fonts/hando/Hando Regular.ttf';
 
 export default createGlobalStyle`
@@ -34,10 +34,10 @@ export default createGlobalStyle`
     }
     
     body {
-      background: ${({theme}) => theme.COLORS.BACKGROUND};
+      background: ${({ theme }) => theme.COLORS.BACKGROUND};
 
-      color: ${({theme}) => theme.COLORS.FONT_COLOR};
-      font-family: ${({theme}) => theme.FONTS.FONT_MAIN};
+      color: ${({ theme }) => theme.COLORS.FONT_COLOR};
+      font-family: ${({ theme }) => theme.FONTS.FONT_MAIN};
     }
 
     img {
@@ -63,4 +63,4 @@ export default createGlobalStyle`
     ul {
       list-style: none;
     }
-`
+`;

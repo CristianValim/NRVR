@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from 'react';
 
 export function useHeaderLogic() {
   const [margin, setMargin] = useState(false);
@@ -11,10 +11,10 @@ export function useHeaderLogic() {
       setMargin(true);
     }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -23,12 +23,12 @@ export function useHeaderLogic() {
       setIsMobile(innerWidth < 600);
     }
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     handleResize();
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -37,28 +37,36 @@ export function useHeaderLogic() {
       setShowMenu(innerWidth > 600);
     }
 
-    window.addEventListener("resize", handleNavBar);
+    window.addEventListener('resize', handleNavBar);
 
     handleNavBar();
 
     return () => {
-      window.removeEventListener("resize", handleNavBar);
+      window.removeEventListener('resize', handleNavBar);
     };
   }, []);
 
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setShowMenu(false);
+  useEffect(
+    () => {
+      function handleClickOutside(event) {
+        if (
+          isMobile &&
+          menuRef.current &&
+          !menuRef.current.contains(event.target)
+        ) {
+          setShowMenu(false);
+        }
       }
-    }
 
-    document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside);
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [menuRef]);
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    },
+    [menuRef],
+    [isMobile],
+  );
 
   function toggleMenu() {
     setShowMenu(!showMenu);
@@ -66,7 +74,6 @@ export function useHeaderLogic() {
 
   function handleMarginOn() {
     setMargin(true);
-    setShowMenu(false);
   }
 
   function handleMarginOff() {

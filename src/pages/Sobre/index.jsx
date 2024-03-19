@@ -1,9 +1,9 @@
-import { Container } from "./styles";
-import { motion, AnimatePresence } from "framer-motion";
+import { Container } from './styles';
+import { motion, AnimatePresence } from 'framer-motion';
 
-import sobre from "../../assets/sobre.png";
-import instagram from "../../assets/instagram.svg";
-import { Link } from "react-router-dom";
+import sobre from '../../assets/sobre.png';
+import instagram from '../../assets/instagram.svg';
+import { Link } from 'react-router-dom';
 
 export function Sobre() {
   return (
@@ -12,10 +12,13 @@ export function Sobre() {
         as={motion.div}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <div className="sobre">
-          <img className="col3" src={sobre} alt="Foto dos fundadores NRVR" />
+          <img
+            className="col3"
+            src={sobre}
+            alt="Foto dos fundadores NRVR"
+          />
           <h1 className="row1">o escritório</h1>
           <p className="row1">
             nrvr arquitetos, prática de arquitetura e urbanismo, do objeto ao
@@ -31,9 +34,11 @@ export function Sobre() {
           <Link
             className="instagram-logo"
             to="https://www.instagram.com/nrvrarquitetos/"
-            target="blank"
-          >
-            <img src={instagram} alt="Link para o nosso Instagram" />
+            target="blank">
+            <img
+              src={instagram}
+              alt="Link para o nosso Instagram"
+            />
           </Link>
 
           <div className="contact col2">
@@ -41,24 +46,22 @@ export function Sobre() {
               <span>contato@nrvrarquitetos.com</span>
             </p>
             <h3>
-              <span>Vitor Reisdörfer</span>
+              <span>vitor reisdörfer</span>
             </h3>
             <Link
               to="https://wa.me/5542998003356"
               target="blank"
-              className="social"
-            >
+              className="social">
               <span>42 9 9800 3356</span>
             </Link>
             <h3>
-              <span>Nilton Ribeiro</span>
+              <span>nilton ribeiro</span>
             </h3>
             <Link
               to="https://wa.me/5544999189608"
               target="blank"
-              className="social"
-            >
-              <span>44 9 9918 9608</span>
+              className="social">
+              <span>44 9 9866 3642</span>
             </Link>
           </div>
         </div>

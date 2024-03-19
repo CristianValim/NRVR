@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from './styles/theme';
 import GlobalStyles from './styles/global';
 
-import { Header } from "./components/Header";
+import { Header } from './components/Header';
 import { AnimatedRoutes } from './components/AnimatedRoutes';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
