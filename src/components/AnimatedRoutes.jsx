@@ -1,4 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { HomeDesktop } from '../pages/HomeDesktop';
 import { HomeMobile } from '../pages/HomeMobile';
 import { Categories } from '../pages/Categories';
@@ -12,6 +13,10 @@ import { useHeaderLogic } from '../hooks/useHeaderLogic';
 export function AnimatedRoutes() {
   const location = useLocation();
   const { isMobile } = useHeaderLogic();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
 
   return (
     <AnimatePresence>

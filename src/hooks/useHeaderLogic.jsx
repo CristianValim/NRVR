@@ -46,29 +46,26 @@ export function useHeaderLogic() {
     };
   }, []);
 
-  useEffect(
-    () => {
-      function handleClickOutside(event) {
-        if (
-          isMobile &&
-          menuRef.current &&
-          !menuRef.current.contains(event.target)
-        ) {
-          setShowMenu(false);
-        }
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        isMobile &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target)
+      ) {
+        setShowMenu(false);
       }
+    }
 
-      document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
-      return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
-      };
-    },
-    [menuRef],
-    [isMobile],
-  );
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMobile, menuRef]);
 
   function toggleMenu() {
+    event.stopPropagation();
     setShowMenu(!showMenu);
   }
 

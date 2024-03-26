@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from 'react-image-gallery';
 import { Container } from './styles';
@@ -12,6 +12,10 @@ export function Project() {
   const { margin, isMobile } = useHeaderLogic();
   const galleryRef = useRef(null);
   const figuresRef = useRef(null);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   const projectsBySlug = Object.fromEntries(
     Object.values(pages)
@@ -73,16 +77,6 @@ export function Project() {
     );
   };
 
-  const handleClickOutside = (event) => {
-    if (
-      isGalleryOpen &&
-      !galleryRef.current.contains(event.target) &&
-      !figuresRef.current.contains(event.target)
-    ) {
-      closeFullscreen();
-    }
-  };
-
   const handleFullscreenOverlayClick = (event) => {
     if (
       isGalleryOpen &&
@@ -96,14 +90,27 @@ export function Project() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        closeFullscreen();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   return (
     <Container
       ref={galleryRef}
       as={motion.div}
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      onClick={handleClickOutside}>
+      exit={{ opacity: 0 }}>
       <img
         className="cover"
         src={cover}

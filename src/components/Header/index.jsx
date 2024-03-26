@@ -45,8 +45,8 @@ export function Header() {
 
       <button
         className="filter"
-        style={{ display: isMobile ? 'flex' : 'none' }}
-        onClick={toggleMenu}>
+        onClick={toggleMenu}
+        style={{ display: isMobile ? 'flex' : 'none' }}>
         <MdOutlineFilterAlt size={'3rem'} />
       </button>
 
