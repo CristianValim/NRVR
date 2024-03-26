@@ -6,11 +6,10 @@ import { motion } from 'framer-motion';
 import { pages } from '../../modules/pagesPath';
 import { useParams, Navigate } from 'react-router-dom';
 import { useHeaderLogic } from '../../hooks/useHeaderLogic';
-import { FaLongArrowAltUp } from 'react-icons/fa';
 
 export function Project() {
   const { slug } = useParams();
-  const { margin } = useHeaderLogic();
+  const { margin, isMobile } = useHeaderLogic();
   const galleryRef = useRef(null);
   const figuresRef = useRef(null);
 
@@ -196,7 +195,8 @@ export function Project() {
 
       <button
         className="goUp"
-        onClick={handleGoUpClick}>
+        onClick={handleGoUpClick}
+        style={{ display: isMobile ? 'block' : 'none' }}>
         ↑
       </button>
     </Container>

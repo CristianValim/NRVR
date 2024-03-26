@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
   font-weight: 300;
+  min-height: 100vh;
 
   h1,
   h3,
