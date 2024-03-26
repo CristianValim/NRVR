@@ -1,14 +1,17 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { Home } from '../pages/Home';
+import { HomeDesktop } from '../pages/HomeDesktop';
+import { HomeMobile } from '../pages/HomeMobile';
 import { Categories } from '../pages/Categories';
 import { Project } from '../pages/Project';
 import { Sobre } from '../pages/Sobre';
 import { NotFound } from '../pages/NotFound';
 
 import { AnimatePresence } from 'framer-motion';
+import { useHeaderLogic } from '../hooks/useHeaderLogic';
 
 export function AnimatedRoutes() {
   const location = useLocation();
+  const { isMobile } = useHeaderLogic();
 
   return (
     <AnimatePresence>
@@ -17,7 +20,7 @@ export function AnimatedRoutes() {
         key={location.pathname}>
         <Route
           path="/NRVR"
-          element={<Home />}
+          element={isMobile ? <HomeMobile /> : <HomeDesktop />}
         />
         <Route
           path="/sobre"

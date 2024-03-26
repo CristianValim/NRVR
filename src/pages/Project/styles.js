@@ -6,7 +6,14 @@ export const Container = styled(motion.div)`
     width: 100%;
     object-fit: cover;
   }
-
+  .transparent-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
   main {
     margin: 7.7rem 0 8.6rem;
     display: flex;
@@ -57,6 +64,10 @@ export const Container = styled(motion.div)`
     max-height: 62.4rem;
     object-fit: cover;
     width: 100%;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   iframe {
@@ -64,6 +75,27 @@ export const Container = styled(motion.div)`
     aspect-ratio: 9/16;
   }
 
+  .fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo do overlay */
+    z-index: 1000; /* Garante que o overlay esteja acima de todos os outros elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-gallery-container {
+    position: absolute;
+    inset: 0;
+  }
+  .goUp {
+    font-size: 4rem;
+    margin-left: 85%;
+  }
   @media (min-width: 600px) {
     .cover {
       height: calc(91svh - 1.8rem);
