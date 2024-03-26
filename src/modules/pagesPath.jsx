@@ -16,10 +16,10 @@ export const pages = {
           imaginação.
         </p>
       ),
-      cover: '/NRVR/images/projects/casas/casaAtelie/images/casa2.png',
+      cover: '/NRVR/images/projects/casas/casaAtelie/figures/cover.png',
       images: [],
       figures: [
-        '/NRVR/images/projects/casas/casaAtelie/figures/casa.jpg',
+        '/NRVR/images/projects/casas/casaAtelie/figures/figure.png',
         '/NRVR/images/projects/casas/casaAtelie/figures/figure1.png',
         '/NRVR/images/projects/casas/casaAtelie/figures/figure2.png',
         '/NRVR/images/projects/casas/casaAtelie/figures/figure3.png',
@@ -88,6 +88,8 @@ export const pages = {
       ],
       figures: [
         '/NRVR/images/projects/interiores/aptoClappier/images/apto3.png',
+        '/NRVR/images/projects/interiores/aptoClappier/images/apto5.png',
+        '/NRVR/images/projects/interiores/aptoClappier/images/apto4.png',
       ],
     },
     resStegmuller: {
@@ -106,7 +108,7 @@ export const pages = {
           interiores.
         </p>
       ),
-      cover: '/NRVR/images/projects/interiores/resStegmuller/images/cover.jpg',
+      cover: '/NRVR/images/projects/interiores/resStegmuller/images/cover.png',
       images: [
         '/NRVR/images/projects/interiores/resStegmuller/images/res1.png',
         '/NRVR/images/projects/interiores/resStegmuller/images/res2.png',
@@ -120,6 +122,24 @@ export const pages = {
         '/NRVR/images/projects/interiores/resStegmuller/images/res10.png',
         '/NRVR/images/projects/interiores/resStegmuller/images/res11.png',
         '/NRVR/images/projects/interiores/resStegmuller/images/res12.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res13.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res14.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res15.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res16.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res17.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res18.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res19.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res20.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res21.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res22.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res23.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res24.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res25.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res26.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res27.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res28.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res29.png',
+        '/NRVR/images/projects/interiores/resStegmuller/images/res30.png',
       ],
       figures: [],
     },
@@ -161,6 +181,7 @@ export const pages = {
       figures: [
         '/NRVR/images/projects/objetos/trophy/images/trophy1.png',
         '/NRVR/images/projects/objetos/trophy/images/trophy2.png',
+        '/NRVR/images/projects/objetos/trophy/images/trophy4.png',
       ],
     },
   },
