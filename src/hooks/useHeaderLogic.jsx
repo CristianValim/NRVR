@@ -1,89 +1,89 @@
-import { useState, useRef, useEffect } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 export function useHeaderLogic() {
-  const [margin, setMargin] = useState(false);
-  const [isMobile, setIsMobile] = useState(true);
-  const [showMenu, setShowMenu] = useState(true);
-  const menuRef = useRef(null);
+	const [margin, setMargin] = useState(false);
+	const [isMobile, setIsMobile] = useState(true);
+	const [showMenu, setShowMenu] = useState(true);
+	const menuRef = useRef(null);
 
-  useEffect(() => {
-    function handleScroll() {
-      setMargin(true);
-    }
+	useEffect(() => {
+		function handleScroll() {
+			setMargin(true);
+		}
 
-    window.addEventListener('scroll', handleScroll);
+		window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(innerWidth < 600);
-    }
+	useEffect(() => {
+		function handleResize() {
+			setIsMobile(innerWidth < 600);
+		}
 
-    window.addEventListener('resize', handleResize);
+		window.addEventListener("resize", handleResize);
 
-    handleResize();
+		handleResize();
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
 
-  useEffect(() => {
-    function handleNavBar() {
-      setShowMenu(innerWidth > 600);
-    }
+	useEffect(() => {
+		function handleNavBar() {
+			setShowMenu(innerWidth > 600);
+		}
 
-    window.addEventListener('resize', handleNavBar);
+		window.addEventListener("resize", handleNavBar);
 
-    handleNavBar();
+		handleNavBar();
 
-    return () => {
-      window.removeEventListener('resize', handleNavBar);
-    };
-  }, []);
+		return () => {
+			window.removeEventListener("resize", handleNavBar);
+		};
+	}, []);
 
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (
-        isMobile &&
-        menuRef.current &&
-        !menuRef.current.contains(event.target)
-      ) {
-        setShowMenu(false);
-      }
-    }
+	useEffect(() => {
+		function handleClickOutside(event) {
+			if (
+				isMobile &&
+				menuRef.current &&
+				!menuRef.current.contains(event.target)
+			) {
+				setShowMenu(false);
+			}
+		}
 
-    document.addEventListener('mousedown', handleClickOutside);
+		document.addEventListener("mousedown", handleClickOutside);
 
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isMobile, menuRef]);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, [isMobile, menuRef]);
 
-  function toggleMenu() {
-    event.stopPropagation();
-    setShowMenu(!showMenu);
-  }
+	function toggleMenu() {
+		event.stopPropagation();
+		setShowMenu(!showMenu);
+	}
 
-  function handleMarginOn() {
-    setMargin(true);
-  }
+	function handleMarginOn() {
+		setMargin(true);
+	}
 
-  function handleMarginOff() {
-    setMargin(false);
-  }
+	function handleMarginOff() {
+		setMargin(false);
+	}
 
-  return {
-    margin,
-    isMobile,
-    showMenu,
-    toggleMenu,
-    handleMarginOn,
-    handleMarginOff,
-    menuRef,
-  };
+	return {
+		margin,
+		isMobile,
+		showMenu,
+		toggleMenu,
+		handleMarginOn,
+		handleMarginOff,
+		menuRef,
+	};
 }
