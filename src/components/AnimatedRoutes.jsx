@@ -22,7 +22,7 @@ export function AnimatedRoutes() {
 		<AnimatePresence>
 			<Routes location={location} key={location.pathname}>
 				<Route
-					path="/NRVR"
+					path="/"
 					element={isMobile ? <HomeMobile /> : <HomeDesktop />}
 				/>
 				<Route path="/sobre" element={<Sobre />} />
