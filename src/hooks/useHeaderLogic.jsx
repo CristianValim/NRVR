@@ -62,7 +62,7 @@ export function useHeaderLogic() {
 		return () => {
 			document.removeEventListener("mousedown", handleClickOutside);
 		};
-	}, [isMobile, menuRef]);
+	}, [isMobile]);
 
 	function toggleMenu() {
 		event.stopPropagation();
